@@ -1,0 +1,26 @@
+# Источники используемые при написании данного кода
+# https://github.com/hse-ai/applied_python/tree/main/fastapi-booking
+
+version: "3.9"
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: hseshon # Имя пользователя бд
+      POSTGRES_PASSWORD: hseshon # Пароль юзера
+      POSTGRES_DB: shortlinker # Название бд
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - redis
