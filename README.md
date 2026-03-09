@@ -91,8 +91,8 @@ cd REPOSITORY_NAME
 
 Создать файл `.env` в корне проекта:
 
-    DB_USER=postgres
-    DB_PASS=postgres
+    DB_USER=postgresql
+    DB_PASS=postgresql
     DB_HOST=db
     DB_PORT=5432
     DB_NAME=shortlinker
