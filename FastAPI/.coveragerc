@@ -1,0 +1,12 @@
+# Истоничики при написании кода
+# https://coveralls-python.readthedocs.io/en/latest/tips/coveragerc.html
+
+# Удаляем из отчета по тестированию лишнюю статистику, не относящуюся к проекту 
+
+
+[run]
+source = app
+
+omit =
+    */site-packages/*
+    tests/*
